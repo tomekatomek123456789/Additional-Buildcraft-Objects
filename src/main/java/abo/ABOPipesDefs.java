@@ -15,7 +15,7 @@ public class ABOPipesDefs {
 	
 	public static void createPipes()
 	{
-		crossoverPipeDef = new PipeDefinitionBuilder().flowItem().idTexPrefix("pipe_items_addition").logic(CrossoverPipe::new, CrossoverPipe::new).define();
+		crossoverPipeDef = new PipeDefinitionBuilder().flowItem().idTexPrefix("crossover_item_pipe").logic(CrossoverPipe::new, CrossoverPipe::new).define();
 		crossoverPipeItem = PipeCreator.createPipeItem(crossoverPipeDef);
 	}
 
