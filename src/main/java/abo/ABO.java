@@ -1,6 +1,7 @@
 package abo;
 
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -10,6 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import java.io.File;
 //import java.util.logging.Logger;
 
+import abo.utils.ABOConfig;
 import abo.utils.Log;
 import buildcraft.lib.registry.CreativeTabManager;
 import buildcraft.lib.registry.CreativeTabManager.CreativeTabBC;
@@ -31,8 +33,16 @@ public class ABO
     public void preInit(FMLPreInitializationEvent event)
     {
     	Log.info("Mod Loading");
+    	//Make config (buildcraft required config file)
+    	configFile = event.getSuggestedConfigurationFile();
+    	ABOConfig.loadConfigs(configFile);
+    	MinecraftForge.EVENT_BUS.register(this);
+    	
+    	//create buildcraft creative tab
         creativeTab = CreativeTabManager.createTab("abocreativetab");
+        Log.info("Registering pipes");
         ABOPipesDefs.createPipes();
+        
     }
 
     @EventHandler
