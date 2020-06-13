@@ -1,4 +1,4 @@
 @echo off
 cd %~dp0
-gradlew assemble
+gradlew build jar
 pause

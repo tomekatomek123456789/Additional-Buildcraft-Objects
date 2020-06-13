@@ -74,8 +74,9 @@ dependencies {
 
     // These dependencies get remapped to your current MCP mappings
     // deobf 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-   deobf "com.mod-buildcraft:buildcraft:7.99.19"
-   compile "com.mod-buildcraft:buildcraft:7.99.19"
+     //deobf "com.mod-buildcraft:buildcraft:7.99.19"
+   //compile "com.mod-buildcraft:buildcraft:7.99.19"
+   compile name: 'buildcraft', version: "7.99.24.1", classifier: "dev", ext: 'jar'
       //deobf name: 'buildcraft', version: "7.99.24.1", classifier: "dev", ext: 'jar'
       //compile name: 'buildcraft', version: "7.99.24.1", classifier: "dev", ext: 'jar'
       
@@ -91,10 +92,10 @@ repositories {
         name "BuildCraft"
         url "http://www.mod-buildcraft.com/maven"
     }
-    //ivy {
-    //    name "BuildCraft"
-    //    artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-[revision]-[classifier].[ext]"
-    //}
+	ivy {
+		name "BuildCraft"
+		artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-main-[revision]-[classifier].[ext]"
+	}
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
