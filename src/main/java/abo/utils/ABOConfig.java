@@ -28,7 +28,7 @@ public class ABOConfig {
 		} 
 		catch(Exception e)
 		{
-			Log.error("Error loading Additional Pipes configs." + e);
+			Log.error("Error loading Additional Buildcraft Objects configs." + e);
 		}
 		finally
 		{

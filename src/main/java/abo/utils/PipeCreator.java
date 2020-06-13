@@ -21,7 +21,7 @@ public class PipeCreator
 	{		
 		ItemPipeHolder item = ItemPipeHolder.create(pipeDef);
 		item.setRegistryName(pipeDef.identifier.getResourcePath());
-		item.setUnlocalizedName("pipe.abo." + pipeDef.identifier.getResourcePath());
+		item.setUnlocalizedName("pipe.adbcobj." + pipeDef.identifier.getResourcePath());
 		item.registerWithPipeApi();
 		item.setCreativeTab(ABO.instance.creativeTab);
 		
