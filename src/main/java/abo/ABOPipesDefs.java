@@ -1,6 +1,7 @@
 package abo;
 
 import abo.pipes.item.CrossoverPipe;
+import abo.utils.Log;
 import abo.utils.PipeCreator;
 import buildcraft.api.transport.pipe.PipeDefinition;
 import buildcraft.api.transport.pipe.PipeDefinition.PipeDefinitionBuilder;
@@ -17,6 +18,7 @@ public class ABOPipesDefs {
 	{
 		crossoverPipeDef = new PipeDefinitionBuilder().flowItem().idTexPrefix("crossover_item_pipe").logic(CrossoverPipe::new, CrossoverPipe::new).define();
 		crossoverPipeItem = PipeCreator.createPipeItem(crossoverPipeDef);
+		Log.info("Createt pipe: "+ crossoverPipeItem.getRegistryName());
 	}
 
 }
