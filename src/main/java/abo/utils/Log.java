@@ -3,7 +3,6 @@ package abo.utils;
 import org.apache.logging.log4j.Level;
 
 import abo.ABO;
-import abo.ABOConfig;
 import net.minecraftforge.fml.common.FMLLog;
 
 public class Log
@@ -21,10 +20,6 @@ public class Log
 
     public static void debug(Object object)
     {
-    	if(ABOConfig.enableDebugLog)
-    	{
-    		log(Level.INFO, object);
-    	}
     }
 
     public static void error(Object object)

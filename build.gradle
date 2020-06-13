@@ -114,6 +114,30 @@ jar {
 jar.finalizedBy('reobfJar') 
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
 //publish.dependsOn('reobfJar')
+processResources
+{
+    // this will ensure that this task is redone when the versions change.
+    //inputs.property "version", project.version
+    //inputs.property "mcversion", project.minecraft.version
+		
+	//exclude Paint.NET pdn files
+	exclude '**/*.pdn'
+
+    // replace stuff in mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        
+		include 'mcmod.info'
+		include 'ABO.java'
+                
+        // replace version and mcversion
+       // expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else, that's not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
 
 publishing {
     publications {
