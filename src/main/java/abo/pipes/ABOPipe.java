@@ -51,7 +51,7 @@ public abstract class ABOPipe extends PipeBehaviour
 	 */
 	public String getUnlocalizedName()
 	{
-		return "item.pipe.adbcobj." + pipe.getDefinition().identifier.getResourcePath() + ".name";
+		return "adbcobj." + pipe.getDefinition().identifier.getResourcePath() + ".name";
 	}
 	
 	/**
