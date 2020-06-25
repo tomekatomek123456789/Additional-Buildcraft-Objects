@@ -6,7 +6,7 @@
 
    Download Links: https://github.com/da3dsoul/Additional-Buildcraft-Objects/releases
 
-   Please report any bugs to GitHub: https://github.com/da3dsoul/Additional-Buildcraft-Objects
+   Please report any bugs to GitHub: https://github.com/tomekatomek123456789/Additional-Buildcraft-Objects
 
 For recipes: I made some pictures, but it's best to use NEI.
 
